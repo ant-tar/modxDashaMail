@@ -1,7 +1,7 @@
 --------------------
 modDashaMail
 --------------------
-Author: John Doe <john@doe.com>
+Author: Anton Tarasov <contact@antontarasov.com>
 --------------------
 
-A basic Extra for MODx Revolution.
+MODX Extra for interaction with DashaMail (https://dashamail.ru) service

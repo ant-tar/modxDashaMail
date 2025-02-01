@@ -5,6 +5,8 @@ class modDashaMail
     /** @var modX $modx */
     public $modx;
 
+/** @var array $config */
+    private $config;
 
     /**
      * @param modX $modx
@@ -18,13 +20,7 @@ class modDashaMail
 
         $this->config = array_merge([
             'corePath' => $corePath,
-            'modelPath' => $corePath . 'model/',
-            'processorsPath' => $corePath . 'processors/',
-
-            'connectorUrl' => $assetsUrl . 'connector.php',
             'assetsUrl' => $assetsUrl,
-            'cssUrl' => $assetsUrl . 'css/',
-            'jsUrl' => $assetsUrl . 'js/',
         ], $config);
 
         $this->modx->addPackage('moddashamail', $this->config['modelPath']);
