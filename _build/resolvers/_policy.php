@@ -8,18 +8,18 @@ if ($transport->xpdo) {
         case xPDOTransport::ACTION_INSTALL:
         case xPDOTransport::ACTION_UPGRADE:
             // Assign policy to template
-            if ($policy = $modx->getObject('modAccessPolicy', array('name' => 'modDashaMailUserPolicy'))) {
+            if ($policy = $modx->getObject('modAccessPolicy', array('name' => 'DashaMailUserPolicy'))) {
                 if ($template = $modx->getObject('modAccessPolicyTemplate',
-                    array('name' => 'modDashaMailUserPolicyTemplate'))
+                    array('name' => 'DashaMailUserPolicyTemplate'))
                 ) {
                     $policy->set('template', $template->get('id'));
                     $policy->save();
                 } else {
                     $modx->log(xPDO::LOG_LEVEL_ERROR,
-                        '[modDashaMail] Could not find modDashaMailUserPolicyTemplate Access Policy Template!');
+                        '[DashaMail] Could not find DashaMailUserPolicyTemplate Access Policy Template!');
                 }
             } else {
-                $modx->log(xPDO::LOG_LEVEL_ERROR, '[modDashaMail] Could not find modDashaMailUserPolicyTemplate Access Policy!');
+                $modx->log(xPDO::LOG_LEVEL_ERROR, '[DashaMail] Could not find DashaMailUserPolicyTemplate Access Policy!');
             }
             break;
     }

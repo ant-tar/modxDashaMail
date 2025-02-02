@@ -4,6 +4,6 @@ return [
     'api_key' => [
         'xtype' => 'textfield',
         'value' => '',
-        'area' => 'moddashamail_main',
+        'area' => 'dashamail_main',
     ],
 ];

@@ -8,10 +8,10 @@ if ($transport->xpdo) {
     switch ($options[xPDOTransport::PACKAGE_ACTION]) {
         case xPDOTransport::ACTION_INSTALL:
         case xPDOTransport::ACTION_UPGRADE:
-            $modx->addPackage('moddashamail', MODX_CORE_PATH . 'components/moddashamail/model/');
+            $modx->addPackage('dashamail', MODX_CORE_PATH . 'components/dashamail/model/');
             $manager = $modx->getManager();
             $objects = [];
-            $schemaFile = MODX_CORE_PATH . 'components/moddashamail/model/schema/moddashamail.mysql.schema.xml';
+            $schemaFile = MODX_CORE_PATH . 'components/dashamail/model/schema/dashamail.mysql.schema.xml';
             if (is_file($schemaFile)) {
                 $schema = new SimpleXMLElement($schemaFile, 0, true);
                 if (isset($schema->object)) {

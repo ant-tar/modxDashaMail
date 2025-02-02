@@ -9,8 +9,8 @@ if (!defined('MODX_CORE_PATH')) {
 }
 
 return [
-    'name' => 'modDashaMail',
-    'name_lower' => 'moddashamail',
+    'name' => 'DashaMail',
+    'name_lower' => 'dashamail',
     'version' => '1.0.1',
     'release' => 'pl',
     // Install package to site right after build

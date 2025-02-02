@@ -1,12 +1,12 @@
 <?php
 
 return [
-    'modDashaMail' => [
+    'DashaMail' => [
         'description' => '',
         'type' => 'file',
         'content' => '',
-        'namespace' => 'moddashamail',
-        'lexicon' => 'moddashamail:dashboards',
+        'namespace' => 'dashamail',
+        'lexicon' => 'dashamail:dashboards',
         'size' => 'half',
     ],
 ];

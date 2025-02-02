@@ -1,11 +1,11 @@
 <?php
 
 return [
-    'modDashaMailUserPolicyTemplate' => [
-        'description' => 'modDashaMail policy template description.',
+    'DashaMailUserPolicyTemplate' => [
+        'description' => 'DashaMail policy template description.',
         'template_group' => 1,
         'permissions' => [
-            'moddashamail_save' => [],
+            'dashamail_save' => [],
         ]
     ],
 ];

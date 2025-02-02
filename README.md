@@ -1,4 +1,4 @@
-## modDashaMail
+## DashaMail
 MODX Extra for interaction with DashaMail(https://dashamail.ru) service
 
 ## Installation

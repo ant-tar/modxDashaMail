@@ -1,11 +1,11 @@
 <?php
 
 return [
-    'tpl.modDashaMail.item' => [
+    'tpl.DashaMail.item' => [
         'file' => 'item',
         'description' => '',
     ],
-    'tpl.modDashaMail.office' => [
+    'tpl.DashaMail.office' => [
         'file' => 'office',
         'description' => '',
     ],

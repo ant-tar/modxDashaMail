@@ -1,10 +1,10 @@
 <?php
 
 return [
-    'modDashaMailUserPolicy' => [
-        'description' => 'modDashaMail policy description.',
+    'DashaMailUserPolicy' => [
+        'description' => 'DashaMail policy description.',
         'data' => [
-            'moddashamail_save' => true,
+            'dashamail_save' => true,
         ]
     ],
 ];

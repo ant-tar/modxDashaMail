@@ -1,8 +1,8 @@
 <?php
 
 return [
-    'modDashaMail' => [
-        'file' => 'moddashamail',
+    'DashaMail' => [
+        'file' => 'dashamail',
         'description' => '',
         'events' => [
             'OnManagerPageInit' => [],

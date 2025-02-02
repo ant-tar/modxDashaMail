@@ -1,6 +1,6 @@
 <?php
 
-class modDashaMailPackage
+class DashaMailPackage
 {
     /** @var modX $modx */
     public $modx;
@@ -17,7 +17,7 @@ class modDashaMailPackage
 
 
     /**
-     * modDashaMailPackage constructor.
+     * DashaMailPackage constructor.
      *
      * @param $core_path
      * @param array $config
@@ -759,7 +759,7 @@ if (!file_exists(dirname(__FILE__) . '/config.inc.php')) {
     exit('Could not load MODX config. Please specify correct MODX_CORE_PATH constant in config file!');
 }
 $config = require(dirname(__FILE__) . '/config.inc.php');
-$install = new modDashaMailPackage(MODX_CORE_PATH, $config);
+$install = new DashaMailPackage(MODX_CORE_PATH, $config);
 $builder = $install->process();
 
 if (!empty($config['download'])) {
