@@ -1,5 +1,0 @@
-Changelog for modDashaMail.
-
-1.0.0-pl
-==============
-- Initial release
