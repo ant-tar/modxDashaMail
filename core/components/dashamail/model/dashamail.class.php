@@ -80,7 +80,7 @@ class DashaMail
         echo "FINAL";
         
         
-        $this->dm->lists_add_member("288061","anton.tarasoff@gmail.com",["merge_1" => "Андрей"]);
+        //$this->dm->lists_add_member("288061","anton.tarasoff@gmail.com",["merge_1" => "Андрей"]);
         //$result = $this->mailchimp->get('/lists/?' . http_build_query($params));
 /*
         $options = [];

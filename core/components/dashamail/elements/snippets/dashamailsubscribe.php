@@ -11,32 +11,29 @@
 /** @var modX $modx */
 /** @var array $scriptProperties */
 /** @var DashaMail $DashaMail */
-echo "1";
 $corePath = $modx->getOption('dashamail.core_path', null, $modx->getOption('core_path') . 'components/dashamail/');
-echo "2";
-
 if (!$modx->loadClass('DashaMail', $corePath.'model/dashamail/', false, true)) {
     return false;
 }
 
 $dashaMail = $modx->getService('dashaMail', 'DashaMail', $corePath, array('core_path' => $corePath));
 if (!$dashaMail) {
-    
-    echo "NOT ";
     $modx->log(xPDO::LOG_LEVEL_ERROR, 'Could not load DashaMail class!');
     return false;
 }
 
-echo "3";
-
-
 
 // properties
-//$listId = array_map('intval', explode(',', $modx->getOption('dashaMailListId', $scriptProperties)));
-//$emailField = $modx->getOption('dashaMailEmailField', $scriptProperties, 'email');
-//$attributes = explode(',', $modx->getOption('dashaMailAttributes', $scriptProperties));
-//$attributesData = array();
 
+$dmEmailField = $modx->getOption('dmEmailField', $scriptProperties, 'email');
+$dmlistId = array_map('intval', explode(',', $modx->getOption('dmListId', $scriptProperties)));
+$dmMergeParams = explode(',', $modx->getOption('dmMergeParams', $scriptProperties));
+$mergeData = [];
+
+$modx->log(modX::LOG_LEVEL_ERROR, 'hook call....');
+$modx->log(modX::LOG_LEVEL_ERROR, 'hook email='.$dmEmailField);
+$modx->log(modX::LOG_LEVEL_ERROR, 'hook list ID ='.$dmlistId);
+$modx->log(modX::LOG_LEVEL_ERROR, 'hook dmMergeParams ='.$dmMergeParams);
 
 // formatting attributes
 //foreach ($attributes as $attribute){
@@ -46,8 +43,8 @@ echo "3";
 
 // init dashaMail Object
 //$dm = new DashaMail($modx);
-$lists = $dashaMail->getDashaMailLists();
-echo print_r($lists);
+//$lists = $dashaMail->getDashaMailLists();
+//echo print_r($lists);
 // create contact
 //$contact = $brv->createContact($data = array(
  //   'email' => $hook->getValue($emailField),
