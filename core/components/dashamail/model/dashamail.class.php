@@ -96,6 +96,29 @@ class DashaMail
         return implode('||', $options);
         */
     }
+    
+    public function addListMember($listID, $email, $params)
+    {
+        $this->modx->log(modX::LOG_LEVEL_ERROR, 'addListMember listID ='.$listID);
+        $this->modx->log(modX::LOG_LEVEL_ERROR, 'addListMember email ='.$email);
+        $params['send_confirm'] = 1;
+        $result = $this->dm->lists_add_member($listID,$email,$params);
+        $this->modx->log(modX::LOG_LEVEL_ERROR, 'addListMember result ='.print_r($result,true));
+        //$result = $this->mailchimp->get('/lists/?' . http_build_query($params));
+/*
+        $options = [];
+        if (isset($result['lists']) && !empty($result['lists'])) {
+            foreach ($result['lists'] as $list) {
+                $options[$list['name']] = $list['name'] . '==' . $list['id'];
+            }
+        }
+
+        asort($options, SORT_NATURAL);
+        array_unshift($options, '- Select a mailchimp list - ==0');
+
+        return implode('||', $options);
+        */
+    }
 
 
 }

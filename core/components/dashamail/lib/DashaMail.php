@@ -96,14 +96,17 @@ class DashaMailPHP {
 		//$json = json_encode($xml);
 		//$final = json_decode($json, TRUE);
 		$final = json_decode($result, TRUE);
-		echo print_r($final);
+		//echo print_r($final);
 		if (!$final)
 			throw new Exception('Получены неверные данные, пожалуйста, убедитесь, что запрашиваемый метод API существует');
+		return $final;
+		/*
 		if ($final['response']['msg']['err_code'] == '0') {
 			return $final['response']['data'];
 		} else {
 			return $this->getError($final['response']['msg']['err_code']);
 		}
+		*/
 	}
 
 	//send post data
@@ -128,16 +131,18 @@ class DashaMailPHP {
 		if ($result == false)
 			throw new Exception(curl_error($ch));
 		curl_close($ch);
-		$xml = simplexml_load_string($result);
-		$json = json_encode($xml);
-		$final = json_decode($json, TRUE);
+		//$xml = simplexml_load_string($result);
+		//$json = json_encode($xml);
+		//$final = json_decode($json, TRUE);
+		$final = json_decode($result, TRUE);
 		if (!$final)
 			throw new Exception('Получены неверные данные, пожалуйста, убедитесь, что запрашиваемый метод API существует');
-		if ($final['msg']['err_code'] == '0') {
-			return $final['data'];
+		return $final;
+		/*if ($final['response']['msg']['err_code'] == '0') {
+			return $final['response']['data'];
 		} else {
-			return $this->getError($final['msg']['err_code']);
-		}
+			return $this->getError($final['response']['msg']['err_code']);
+		}*/
 	}
 
 	//check email address
@@ -149,6 +154,8 @@ class DashaMailPHP {
 		$final = json_decode($json, TRUE);
 		if (!$final)
 			throw new Exception('При проверке email получены неверные данные');
+			
+			
 		$err = $final['err_code'];
 		if ($err == '0' || $err == '1') {
 			return $final['text'];
