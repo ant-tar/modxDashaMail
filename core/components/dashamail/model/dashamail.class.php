@@ -16,6 +16,8 @@ class DashaMail
      * @var \DashaMailPHP
      */
     public $dm;
+    
+    private $cultureKey;
 
 
     /**
@@ -27,8 +29,8 @@ class DashaMail
         $this->modx =& $modx;
        // $this->namespace = $this->getOption('namespace', $config, 'dashamail');
 
-        $corePath = MODX_CORE_PATH . 'components/moddashamail/';
-        $assetsUrl = MODX_ASSETS_URL . 'components/moddashamail/';
+        $corePath = MODX_CORE_PATH . 'components/dashamail/';
+        $assetsUrl = MODX_ASSETS_URL . 'components/dashamail/';
         $connectorUrl = $assetsUrl . 'connector.php';
 
         $this->config = array_merge([
@@ -55,6 +57,8 @@ class DashaMail
         $this->modx->lexicon->load('dashamail:default');
         
         $this->initDashaMailApi();
+        
+        $this->$cultureKey = $this->modx->getOption('cultureKey') ?? 'en';
     }
     
     
@@ -68,6 +72,11 @@ class DashaMail
     {
         $this->dm = new \DMP\DashaMailPHP($this->modx->getOption('dashamail_api_key'));
     }
+    
+    //get error codes
+	private function getError($key) {
+		return $this->modx->lexicon('dashamail_api_response_code_'.$key,[],$this->$cultureKey);
+	}
     
     public function getDashaMailLists()
     {
@@ -101,9 +110,18 @@ class DashaMail
     {
         $this->modx->log(modX::LOG_LEVEL_ERROR, 'addListMember listID ='.$listID);
         $this->modx->log(modX::LOG_LEVEL_ERROR, 'addListMember email ='.$email);
-        $params['send_confirm'] = 1;
+        //$params['send_confirm'] = 1;
         $result = $this->dm->lists_add_member($listID,$email,$params);
         $this->modx->log(modX::LOG_LEVEL_ERROR, 'addListMember result ='.print_r($result,true));
+        
+        if ($result['msg']['err_code'] == '0') {
+			return $result['data'];
+		} else {
+			return $this->getError($result['msg']['err_code']);
+		}
+      
+        
+        
         //$result = $this->mailchimp->get('/lists/?' . http_build_query($params));
 /*
         $options = [];
@@ -119,6 +137,7 @@ class DashaMail
         return implode('||', $options);
         */
     }
+    
 
 
 }

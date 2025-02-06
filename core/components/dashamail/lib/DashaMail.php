@@ -99,7 +99,7 @@ class DashaMailPHP {
 		//echo print_r($final);
 		if (!$final)
 			throw new Exception('Получены неверные данные, пожалуйста, убедитесь, что запрашиваемый метод API существует');
-		return $final;
+		return $final['response'];
 		/*
 		if ($final['response']['msg']['err_code'] == '0') {
 			return $final['response']['data'];
@@ -137,7 +137,7 @@ class DashaMailPHP {
 		$final = json_decode($result, TRUE);
 		if (!$final)
 			throw new Exception('Получены неверные данные, пожалуйста, убедитесь, что запрашиваемый метод API существует');
-		return $final;
+		return $final['response'];
 		/*if ($final['response']['msg']['err_code'] == '0') {
 			return $final['response']['data'];
 		} else {
