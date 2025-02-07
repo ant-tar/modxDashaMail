@@ -1,5 +1,4 @@
 # DashaMail
-![Reviews version](https://img.shields.io/badge/version-1.0.0-brightgreen.svg) ![MODX version requirements](https://img.shields.io/badge/modx%20version%20requirement-2.4%2B-blue.svg)
 
 A FormIt hook provided to subscribe an email address to your [DashaMail](https://dashamail.ru) list.
 
