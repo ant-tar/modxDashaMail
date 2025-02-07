@@ -1,9 +1,9 @@
 <?php
 
 return [
-    'DashaMail' => [
-        'file' => 'dashamail',
-        'description' => 'DashaMail snippet to list items',
+    'dashaMailSubscribe' => [
+        'file' => 'dashamailsubscribe',
+        'description' => 'DashaMail hook snippet for subscription',
         'properties' => [
             'tpl' => [
                 'type' => 'textfield',
