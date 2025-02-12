@@ -30,6 +30,10 @@ Before using the hook, `dashamail_api_key` API key and `dashamail_list_id` list 
 | dmlistId | [optional] DashaMail list id to subscribe to, it helps override default value stored in system setting `dashamail_list_id` |
 | dmMergeParams | [optional] The merge tags of Mailchimp combined with the form fields. More details can be found in [API documentation](https://dashamail.ru/api_details/?method=lists.add_member). Empty by default. |
 
+## Minishop2 order user subscription
+
+TBD
+
 ## Further plans
 
 In next version it is planned to add website users export to DashaMail side along as hooks for Login extra.

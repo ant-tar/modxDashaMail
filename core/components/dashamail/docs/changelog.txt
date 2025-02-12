@@ -3,3 +3,7 @@ Changelog for DashaMail.
 1.0.0-pl
 ==============
 - Initial release
+
+1.0.1-pl
+==============
+- Minishop2 order user subscription support, plugin added
