@@ -1,7 +1,7 @@
 <?php
 
 return [
-    'dashaMailSubscribe' => [
+    'dmSubscribe' => [
         'file' => 'dashamailsubscribe',
         'description' => 'DashaMail hook snippet for subscription',
         'properties' => [
@@ -34,5 +34,10 @@ return [
                 'value' => false,
             ],
         ],
+    ],
+	'dmCheckbox' => [
+        'file' => 'dmCheckbox',
+        'description' => '',
+        
     ],
 ];
