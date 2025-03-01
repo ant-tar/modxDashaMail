@@ -36,14 +36,11 @@ class DashaMail
         $this->config = array_merge([
             'assets_url' => $assetsUrl,
             'core_path' => $corePath,
-
             'assetsUrl' => $assetsUrl,
             'cssUrl' => $assetsUrl . 'css/',
             'jsUrl' => $assetsUrl . 'js/',
             'imagesUrl' => $assetsUrl . 'images/',
-
             'connectorUrl' => $connectorUrl,
-
             'corePath' => $corePath,
             'modelPath' => $corePath . 'model/',
             'chunksPath' => $corePath . 'elements/chunks/',
@@ -55,13 +52,10 @@ class DashaMail
 
         $this->modx->addPackage('dashamail', $this->config['modelPath']);
         $this->modx->lexicon->load('dashamail:default');
-        
         $this->initDashaMailApi();
-        
         $this->$cultureKey = $this->modx->getOption('cultureKey') ?? 'en';
     }
-    
-    
+
 	
 	/**
      * Init DashaMail Class.
@@ -80,62 +74,19 @@ class DashaMail
     
     public function getDashaMailLists()
     {
-        //echo $this->initDashaMailApi();
-        //echo "!!!!!";
-        $params = array('count' => 100);
-        
         $lists = $this->dm->lists_get();
-        echo print_r($lists);
-        echo "FINAL";
-        
-        
-        //$this->dm->lists_add_member("288061","anton.tarasoff@gmail.com",["merge_1" => "Андрей"]);
-        //$result = $this->mailchimp->get('/lists/?' . http_build_query($params));
-/*
-        $options = [];
-        if (isset($result['lists']) && !empty($result['lists'])) {
-            foreach ($result['lists'] as $list) {
-                $options[$list['name']] = $list['name'] . '==' . $list['id'];
-            }
-        }
-
-        asort($options, SORT_NATURAL);
-        array_unshift($options, '- Select a mailchimp list - ==0');
-
-        return implode('||', $options);
-        */
     }
     
     public function addListMember($listID, $email, $params)
     {
-        $this->modx->log(modX::LOG_LEVEL_ERROR, 'addListMember listID ='.$listID);
-        $this->modx->log(modX::LOG_LEVEL_ERROR, 'addListMember email ='.$email);
-        //$params['send_confirm'] = 1;
         $result = $this->dm->lists_add_member($listID,$email,$params);
-        $this->modx->log(modX::LOG_LEVEL_ERROR, 'addListMember result ='.print_r($result,true));
-        
         if ($result['msg']['err_code'] == '0') {
 			return $result['data'];
 		} else {
+		    $this->modx->log(modX::LOG_LEVEL_ERROR, $this->getError($result['msg']['err_code']));
 			return $this->getError($result['msg']['err_code']);
 		}
-      
-        
-        
-        //$result = $this->mailchimp->get('/lists/?' . http_build_query($params));
-/*
-        $options = [];
-        if (isset($result['lists']) && !empty($result['lists'])) {
-            foreach ($result['lists'] as $list) {
-                $options[$list['name']] = $list['name'] . '==' . $list['id'];
-            }
-        }
-
-        asort($options, SORT_NATURAL);
-        array_unshift($options, '- Select a mailchimp list - ==0');
-
-        return implode('||', $options);
-        */
+ 
     }
     
 
