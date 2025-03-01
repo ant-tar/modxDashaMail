@@ -2,7 +2,7 @@
 
 return [
     'dmSubscribe' => [
-        'file' => 'dashamailsubscribe',
+        'file' => 'dmsubscribe',
         'description' => 'DashaMail hook snippet for subscription',
         'properties' => [
             'tpl' => [
@@ -36,8 +36,8 @@ return [
         ],
     ],
 	'dmCheckbox' => [
-        'file' => 'dmCheckbox',
-        'description' => '',
+        'file' => 'dmcheckbox',
+        'description' => 'DashaMail snippet for subscription checkbox visualization',
         
     ],
 ];
