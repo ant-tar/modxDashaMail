@@ -6,7 +6,10 @@ Changelog for DashaMail.
 
 1.0.1-pl
 ==============
-- Minishop2 order subscription support, plugin added
+- Minishop2 order user subscription support, plugin added
+
+1.0.2-pl
+==============
 - Extended lexicons (English, Russian)
 - New system settings added
 - More detailed readme
