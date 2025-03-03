@@ -6,5 +6,8 @@ Changelog for DashaMail.
 
 1.0.1-pl
 ==============
-- Minishop2 order user subscription support: additional plugin, snippet and chunk were added
-- Added checkbox allowing to unsubscribe from newsletter
+- Minishop2 order subscription support, plugin added
+- Extended lexicons (English, Russian)
+- New system settings added
+- More detailed readme
+- Code refactoring
