@@ -2,7 +2,7 @@
 
 return [
     'dmCheckboxTpl' => [
-        'file' => 'dmCheckboxTpl',
-        'description' => '',
+        'file' => 'dmcheckboxtpl',
+        'description' => 'default checkbox chunk view',
     ],
 ];

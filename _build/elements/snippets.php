@@ -37,7 +37,12 @@ return [
     ],
 	'dmCheckbox' => [
         'file' => 'dmcheckbox',
-        'description' => 'DashaMail snippet for subscription checkbox visualization',
-        
+        'description' => 'Snippet returns subscription confirmation checkbox, can be customized',
+        'properties' => [
+            'tpl' => [
+                'type' => 'textfield',
+                'value' => 'dmCheckboxTpl',
+            ],
+        ]    
     ],
 ];

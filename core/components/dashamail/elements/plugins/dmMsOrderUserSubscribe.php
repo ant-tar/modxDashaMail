@@ -11,13 +11,14 @@ switch ($modx->event->name) {
       $msPhone = $msAddress->get('phone');
       $msEmail = $msAddress->get('email');
       $msAddressReceiver = $msAddress->get('receiver');
+ 
       if($msSubscription){
         $dashamail = $modx->getService('dashamail','DashaMail',$modx->getOption('dashamail.core_path',null,$modx->getOption('core_path').'components/dashamail/').'model/dashamail/',[]);
         if (!($dashamail instanceof DashaMail)) {
             return;
         }
         $dm = new DashaMail($modx);
-        $mergeData = ['merge_6' => $msPhone, 'merge_4' => $msAddressReceiver]; // TBD
+        $mergeData = ['merge_3' => $msPhone]; //
         $listMember = $dm->addListMember($dmListID, $msEmail, $mergeData);
       }
     break;

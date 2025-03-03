@@ -9,13 +9,13 @@ Install the extra via MODX package manager
 Signup for an account on [DashaMail](https://dashamail.ru) and create an API key, [here](https://dashamail.ru/api/?_gl=1*rf286y*_ga*MTY0NjI0Mzg4NC4xNzM2OTI3MzA0*_ga_HWEQYTTCPL*MTczODQ0MDgwOS4xMC4xLjE3Mzg0NDA5MjAuMjAuMC4w) are more details.
 
 ## System settings
-Before using the hook, `dashamail_api_key` API key and `dashamail_list_id` list ID system settings must be specified.
+Before using the hook, `dashamail_api_key` API key and `dashamail_list_id` list ID system settings must be specified. `dashamail_merge_fields` list is responsible for default field matching.
 
 ## Example snippet call
 
 ```
 [[!FormIt?
-  &hooks=`dashaMailSubscribe`
+  &hooks=`dmSubscribe`
   &dmEmailField=`email-field-name`
   &dmlistId=`12345678`
   &dmMergeParams=`merge_1==name,merge_2==surname`
@@ -31,6 +31,10 @@ Before using the hook, `dashamail_api_key` API key and `dashamail_list_id` list 
 | dmMergeParams | [optional] The merge tags of Mailchimp combined with the form fields. More details can be found in [API documentation](https://dashamail.ru/api_details/?method=lists.add_member). Empty by default. |
 
 ## Minishop2 order user subscription
+
+Package includes default snippet, it is responsible for user's consent subscription checkbox. Place it inside Minishop2 order form. Checkbox can be customized, see `tpl` default parameter or specify it directly.
+
+## Custom code subscription
 
 TBD
 
