@@ -48,7 +48,7 @@ If you need to subscribe user to DashaMail service somewhere else in the code, y
 $dashamail = $modx->getService('dashamail','DashaMail',$modx->getOption('dashamail.core_path',null,$modx->getOption('core_path').'components/dashamail/').'model/dashamail/',[]);
 if ($dashamail instanceof DashaMail) {
 	$dm = new DashaMail($modx);
-	$dm->addListMember($email);
+	$dm->addListMember('',$email);
 }
 ```
 
