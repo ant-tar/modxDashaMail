@@ -11,6 +11,6 @@ Changelog for DashaMail.
 1.0.2-pl
 ==============
 - Extended lexicons (English, Russian)
-- New system settings added
+- New system settings added - merge fields & checkbox name
 - More detailed readme
-- Code refactoring
+- Code refactoring, proper naming
