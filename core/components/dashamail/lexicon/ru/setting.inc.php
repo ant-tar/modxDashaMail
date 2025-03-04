@@ -12,4 +12,4 @@ $_lang['setting_dashamail_merge_fields'] = 'Список полей подста
 $_lang['setting_dashamail_merge_fields_desc'] = 'Будет использован, если он нигде далее переопределен, например, в хуке';
 
 $_lang['setting_dashamail_checkbox_name'] = 'Имя поля чекбокса';
-$_lang['setting_dashamail_list_id_desc'] = 'Имя input поля для подтверждения подписки, если значение пустое  - подтверждение не требуется';
+$_lang['setting_dashamail_checkbox_name_desc'] = 'Имя input поля для подтверждения подписки, если значение пустое  - подтверждение не требуется';

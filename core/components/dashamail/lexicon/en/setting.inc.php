@@ -12,4 +12,4 @@ $_lang['setting_dashamail_merge_fields'] = 'Default merge list';
 $_lang['setting_dashamail_merge_fields_desc'] = 'If not redefined this one will be used by default';
 
 $_lang['setting_dashamail_checkbox_name'] = 'Checkbox field name';
-$_lang['setting_dashamail_list_id_desc'] = 'Checkbox name for subscription confirmation, empty value means no confirmation';
+$_lang['setting_dashamail_checkbox_name_desc'] = 'Checkbox name for subscription confirmation, empty value means no confirmation';
