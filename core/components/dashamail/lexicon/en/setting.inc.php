@@ -13,6 +13,3 @@ $_lang['setting_dashamail_list_id_desc'] = 'If not redefined this one will be us
 
 $_lang['setting_dashamail_checkbox_name'] = 'Checkbox field name';
 $_lang['setting_dashamail_list_id_desc'] = 'Checkbox name for subscription confirmation, empty value means no confirmation';
-
-
-
