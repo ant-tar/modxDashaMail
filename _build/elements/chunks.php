@@ -3,6 +3,6 @@
 return [
     'dmCheckboxTpl' => [
         'file' => 'dmcheckboxtpl',
-        'description' => 'default checkbox chunk view',
+        'description' => 'Subscription checkbox view',
     ],
 ];

@@ -1,6 +1,6 @@
 # DashaMail
 
-A FormIt hook provided to subscribe an email address to your [DashaMail](https://dashamail.ru) list.
+[DashaMail](https://dashamail.ru) component gives your user subscription to the service, including Formit hook and [Minishop2](https://en.modstore.pro/packages/ecommerce/minishop2) order subscription in case you use it.
 
 ## Installation
 Install the extra via MODX package manager
@@ -42,7 +42,15 @@ Package includes default `dmCheckbox` snippet, it is responsible for user's cons
 
 ## Custom code subscription
 
-TBD
+If you need to subscribe user to DashaMail service somewhere else in the code, you can do it like this:
+
+```
+$dashamail = $modx->getService('dashamail','DashaMail',$modx->getOption('dashamail.core_path',null,$modx->getOption('core_path').'components/dashamail/').'model/dashamail/',[]);
+if ($dashamail instanceof DashaMail) {
+	$dm = new DashaMail($modx);
+	$dm->addListMember($email);
+}
+```
 
 ## Further plans
 

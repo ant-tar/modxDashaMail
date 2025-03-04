@@ -1,17 +1,15 @@
 <?php
 
-$_lang['area_dashamail_main'] = 'Main';
+$_lang['area_dashamail_main'] = 'Главная';
 
-$_lang['setting_dashamail_api_key'] = 'API key';
-$_lang['setting_dashamail_api_key_desc'] = 'Take it from DashaMail website settings';
+$_lang['setting_dashamail_api_key'] = 'API ключ';
+$_lang['setting_dashamail_api_key_desc'] = 'Возьмите его из настроек сервиса DashaMail';
 
-$_lang['setting_dashamail_list_id'] = 'User list ID';
-$_lang['setting_dashamail_list_id_desc'] = 'Take it from DashaMail website, basically this is list ID from page URL';
+$_lang['setting_dashamail_list_id'] = 'ID адресной базы';
+$_lang['setting_dashamail_list_id_desc'] = 'Возьмите его из настроек сервиса DashaMail, этот ID указан в URL адресе страницы списка пользователей';
 
-$_lang['setting_dashamail_merge_list'] = 'Default merge list';
-$_lang['setting_dashamail_list_id_desc'] = 'If not redefined this one will be used by default';
+$_lang['setting_dashamail_merge_list'] = 'Список полей подстановки по умолчанию';
+$_lang['setting_dashamail_list_id_desc'] = 'Будет использован, если он нигде далее переопределен, например, в хуке';
 
-$_lang['setting_dashamail_checkbox_name'] = 'Checkbox field name';
-$_lang['setting_dashamail_list_id_desc'] = 'Checkbox name for subscription confirmation, empty value means no confirmation';
-
-
+$_lang['setting_dashamail_checkbox_name'] = 'Имя поля чекбокса';
+$_lang['setting_dashamail_list_id_desc'] = 'Имя input поля для подтверждения подписки, если значение пустое  - подтверждение не требуется';

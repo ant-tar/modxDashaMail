@@ -1,2 +1,1 @@
-
-MODX Extra for interaction with DashaMail service
+[DashaMail](https://dashamail.ru) component gives your user subscription to the service, including Formit hook and [Minishop2](https://en.modstore.pro/packages/ecommerce/minishop2) order subscription in case you use it.
